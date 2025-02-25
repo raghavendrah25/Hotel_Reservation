@@ -6,8 +6,6 @@ import (
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/raghavendrah25/Hotel_Reservation/api"
-	"go.mongodb.org/mongo-driver/mongo"
-	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
 func main() {
