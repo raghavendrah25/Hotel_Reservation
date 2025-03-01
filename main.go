@@ -6,10 +6,12 @@ import (
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/raghavendrah25/Hotel_Reservation/api"
+	"github.com/raghavendrah25/Hotel_Reservation/types"
 )
 
 func main() {
-	listenAddress := flag.String("listen", ":8080", "The address to listen on for HTTP requests.")
+	var port string
+	flag.StringVar(&port, "port", "8080", "Port to listen on")
 	flag.Usage = func() {
 		fmt.Println("Usage: server [options]")
 		flag.PrintDefaults()
@@ -21,5 +23,5 @@ func main() {
 
 	apiv1.Get("/user", api.HandleGetUsers)
 	apiv1.Get("/user/:id", api.HandleGetUser)
-	app.Listen(*listenAddress)
+	app.Listen(":" + port)
 }
