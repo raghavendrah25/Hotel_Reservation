@@ -6,7 +6,6 @@ import (
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/raghavendrah25/Hotel_Reservation/api"
-	"github.com/raghavendrah25/Hotel_Reservation/types"
 )
 
 func main() {
